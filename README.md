@@ -1,6 +1,6 @@
 # koa-starter
 
-> A seed project for Koa server application
+> A seed project for building web applications using Koa with MongoDB
 
 ## Usage
 
