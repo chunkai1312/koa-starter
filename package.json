@@ -1,7 +1,7 @@
 {
   "name": "koa-starter",
   "version": "1.0.0",
-  "description": "A seed project for Koa server application",
+  "description": "A seed project for building web applications using Koa with MongoDB",
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node app.js",
