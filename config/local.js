@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
 
   // Environment Variable, default = development
-  env: process.env.NODE_ENV || 'production',
+  env: process.env.NODE_ENV || 'development',
 
   // Server Port
   port: process.env.PORT || 8080,
