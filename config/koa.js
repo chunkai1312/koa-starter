@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-const path = require('path');
-const bodyparser = require('koa-bodyparser');
-const logger = require('koa-logger');
-const json = require('koa-json');
-const serve = require('koa-static');
-const render = require('koa-ejs');
-const config = require('../config');
+const path = require('path')
+const bodyparser = require('koa-bodyparser')
+const logger = require('koa-logger')
+const json = require('koa-json')
+const serve = require('koa-static')
+const render = require('koa-ejs')
+const config = require('../config')
 
 module.exports = function (app) {
   render(app, {
@@ -14,12 +14,12 @@ module.exports = function (app) {
     layout: 'layout',
     viewExt: 'html',
     cache: false,
-    debug: true,
-  });
+    debug: true
+  })
 
-  app.use(bodyparser());
-  app.use(json());
-  app.use(logger());
+  app.use(bodyparser())
+  app.use(json())
+  app.use(logger())
 
-  app.use(serve(path.join(config.root, 'public')));
-};
+  app.use(serve(path.join(config.root, 'public')))
+}

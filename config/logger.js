@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-const path = require('path');
-const winston = require('winston');
-const DailyRotateFile = require('winston-daily-rotate-file');
-const config = require('../config');
+const path = require('path')
+const winston = require('winston')
+const DailyRotateFile = require('winston-daily-rotate-file')
+const config = require('../config')
 
 const logger = new winston.Logger({
   transports: [
@@ -13,7 +13,7 @@ const logger = new winston.Logger({
       filename: path.join(config.root, 'logs', 'all.log'),
       handleExceptions: true,
       json: true,
-      colorize: false,
+      colorize: false
     }),
     new DailyRotateFile({
       name: 'warn-file',
@@ -21,7 +21,7 @@ const logger = new winston.Logger({
       filename: path.join(config.root, 'logs', 'warn.log'),
       handleExceptions: true,
       json: true,
-      colorize: false,
+      colorize: false
     }),
     new DailyRotateFile({
       name: 'error-file',
@@ -29,17 +29,17 @@ const logger = new winston.Logger({
       filename: path.join(config.root, 'logs', 'error.log'),
       handleExceptions: true,
       json: true,
-      colorize: false,
+      colorize: false
     }),
     new winston.transports.Console({
       level: 'debug',
       handleExceptions: true,
       json: false,
       colorize: true,
-      prettyPrint: true,
-    }),
+      prettyPrint: true
+    })
   ],
-  exitOnError: false,
-});
+  exitOnError: false
+})
 
-module.exports = logger;
+module.exports = logger
